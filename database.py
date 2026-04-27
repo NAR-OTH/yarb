@@ -3,12 +3,20 @@
 State is scoped PER GROUP (chat_id): a user has independent coins/team/projects
 in every group where they /start the bot.
 """
+import os
 import sqlite3
 import time
 from contextlib import contextmanager
 from typing import Optional, Iterator
 
+# هذا الكود اللي راح يجبر السيرفر يصنع الخزنة
+try:
+    os.makedirs('/data', exist_ok=True)
+except:
+    pass
+
 DB_PATH = "/data/empire.db"
+
 
 STARTING_COINS = 5000
 
