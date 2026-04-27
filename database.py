@@ -8,7 +8,7 @@ import time
 from contextlib import contextmanager
 from typing import Optional, Iterator
 
-DB_PATH = "bot/empire.db"
+DB_PATH = "empire.db"
 
 STARTING_COINS = 5000
 
